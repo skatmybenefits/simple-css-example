@@ -1,54 +1,43 @@
 <html>
-	<head></head>
+	<head>
+		 <title>Creating A CSS Grid</title>
+		  <!-- inject:css -->
+  		  <link rel="stylesheet" href="/css/content.css">
+  		  <link rel="stylesheet" href="/css/grid.css">
+  		  <link rel="stylesheet" href="/css/reset.css">
+  		  <link rel="stylesheet" href="/css/styles.css">
+  		  <!-- endinject -->
+	</head>
 	<body>
-		
-		
-		
-		<div class="float-row">
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
+		<div class="content">
+			<div class="grid-row grid-style-b header">
+				<div class="column-3">col 3</div>
+				<div class="column-9">col 9</div>
+			</div>
+			
+			<div class="grid-row padding-ends grid-style-a">
+				<div class="column-6">col 6</div>
+				<div class="column-6">col 6</div>
+			</div>
+			
+			<!--					
+			custom markup
+			not suported in all browsers-->
+			<grid-row>
+				<column size="2">col 2</column>
+				<column size="10">col 10</column>
+			</grid-row>
+			<p>Mix styles</p>
+			<!--  mix styles-->	
+			<grid-row>
+				<div class="column-6">col 6</div>
+				<column size="6">col 6</column>
+			</grid-row>
+			
+			<div class="grid-row  grid-style-b footer">
+				<column size="4">col 4</column>
+				<div class="column-8">col 8</div>
+			</div>
 		</div>
-		
-		<div class="table-row">
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-		</div>
-		
-		<div class="flex-row">
-		    <div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-			<div>data col</div>
-		</div>
-		
-		
 	</body>
 </html>

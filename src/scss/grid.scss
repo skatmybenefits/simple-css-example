@@ -1,0 +1,85 @@
+//------------------------------------------------------------------------
+// Semantic Grid            
+//------------------------------------------------------------------------
+$grid-num-of-columns:12;
+
+.grid-row{
+	
+  padding:0;
+  position: static;
+  display: bloack;
+  margin-left:-15px;
+  margin-right:-15px;
+  
+  //todo: should be global
+  &.padding-left{
+    padding-left:15px;
+  }
+  &.padding-right{
+    padding-right:15px;
+  }
+  &.padding-ends{
+     padding-right:15px;
+     padding-left:15px;
+  }
+  
+  // > immediate child div elements 
+     > div, >  column{
+       padding:10px 15px;
+       position: relative;
+       display: block;
+       float: left;
+    }
+
+  ///------------------------------------------------------------------------
+  /// build grid columnns mixin
+  ///------------------------------------------------------------------------
+  
+  @mixin grid-columns-for-name() {
+    $column-name: 'column';
+    
+    @for $i from 1 through $grid-num-of-columns {
+      
+      //<div class="col-1 -col-12"></column>
+      > .#{$column-name}-#{$i}{
+          width: percentage(($i / $grid-num-of-columns));
+        }
+      //<column size="1-12"></column> 
+      > #{$column-name}{
+          &[#{size}="#{$i}"]{
+            width: percentage(($i / $grid-num-of-columns));  
+          }
+          
+        } 
+    }
+    
+  }
+  @include grid-columns-for-name();
+
+
+  //used to clear floats
+  //inserts a table before and after child elements
+  &:after, &:before{
+	  display: table;
+	  content: "";
+  }
+  //used to clear floats
+  //clears float tells browser elements on both sides are not allowed to float 
+  &:after{
+	  clear: both;
+  }
+
+}
+
+// custom markup
+grid-row{
+   @extend .grid-row;
+   display: block !important;
+}
+
+
+
+
+
+
+

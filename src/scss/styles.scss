@@ -1,0 +1,72 @@
+
+body{
+	font-size: 14px;
+	line-height: 14px;
+  background-color: rgb(238, 238, 238);
+  padding-top:15px;
+}
+
+p{
+  display:block;
+  font-size:1.2em;
+  line-height: 1.2em;
+  letter-spacing: 0.010em;
+  margin:15px 0;
+}
+.content{
+  margin:15px;
+  background-color: #fff;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+}
+
+/// ------------------------------------------------------
+/// Grid Styles
+/// ------------------------------------------------------
+
+.grid-row, grid-row{
+  //margin-bottom: 20px;
+}
+
+.grid-style-a{
+  
+  > div, > column{
+      border:1px solid #000000;
+      border-right:1px solid #fff;
+      &:last-child{
+        border-right:1px solid #000000;
+      }
+  }
+
+}
+.grid-style-b{
+   //border:1px solid #000000;
+   //border-left:0;
+   //border-right:0;
+   // padding-top:10px;
+   // padding-bottom:10.500px;
+   
+   > div, > column{
+     padding-top:22px;
+     padding-bottom:22px;
+   }
+   
+  &.header{
+   margin-top:-15px;
+   margin-bottom:15px;
+   border-top:0;
+   color:#fff;
+   font-weight: bold;
+   font-size:16px;
+   background-color: rgb(16,108,200);
+      
+  }
+ 
+ &.footer{
+   margin-bottom:-15px;
+   margin-top:15px;
+   border-bottom:0;
+   background-color: #ccc;
+ }
+
+}
+
